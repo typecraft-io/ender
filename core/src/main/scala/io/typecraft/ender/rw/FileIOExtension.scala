@@ -6,7 +6,7 @@ import cats.implicits._
 import java.io._
 
 trait FileIOExtension extends StreamIOExtension {
-  implicit class FileIOOps(file: File) {
+  implicit class ToFileIOOps(file: File) {
     def readText[F[_]: Sync]: F[String] =
       for {
         inStream <- Sync[F].blocking(new FileInputStream(file))

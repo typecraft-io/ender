@@ -6,7 +6,7 @@ import cats.effect.kernel.Sync
 import java.io._
 
 trait StreamIOExtension {
-  implicit class InputStreamOps(inStream: InputStream) {
+  implicit class ToInputStreamOps(inStream: InputStream) {
     def readText[F[_]: Sync]: F[String] =
       Resource
         .make {
@@ -26,7 +26,7 @@ trait StreamIOExtension {
         }
   }
 
-  implicit class OutputStreamOps(outStream: OutputStream) {
+  implicit class ToOutputStreamOps(outStream: OutputStream) {
     def writeText[F[_]: Sync](text: String): F[Unit] =
       Resource
         .make {

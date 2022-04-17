@@ -6,7 +6,6 @@ A pure, functional library for Minecraft development with Scala.
 
 ```sbt
 libraryDependencies += "io.typecraft" %% "ender" % "0.1.0"
-
 ```
 
 # Configuration
