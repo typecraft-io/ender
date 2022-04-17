@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ender.iml" filepath="$PROJECT_DIR$/.idea/modules/ender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ender-build.iml" filepath="$PROJECT_DIR$/.idea/modules/ender-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ender-bukkit.iml" filepath="$PROJECT_DIR$/.idea/modules/ender-bukkit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ender-core.iml" filepath="$PROJECT_DIR$/.idea/modules/ender-core.iml" />
+    </modules>
+  </component>
+</project>
