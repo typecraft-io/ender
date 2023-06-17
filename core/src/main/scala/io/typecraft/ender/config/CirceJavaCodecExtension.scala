@@ -2,6 +2,7 @@ package io.typecraft.ender.config
 
 import io.circe.{Decoder, Encoder}
 
+import java.time.LocalDateTime
 import java.util.UUID
 import scala.util.Try
 

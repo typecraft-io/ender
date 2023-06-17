@@ -29,6 +29,9 @@ trait PluginExtension {
     override def readConfig[A: Decoder]: Either[io.circe.Error, A] =
       PluginExtension.readConfig[A](plugin)
 
+    override def writeDataFile[A: Encoder](fileName: String)(a: A): Try[Unit] =
+      PluginExtension.writeDataFile(fileName)(a)(plugin)
+
     override def writeConfig[A: Encoder](a: A): Try[Unit] =
       PluginExtension.writeConfig[A](a)(plugin)
 
@@ -57,10 +60,13 @@ object PluginExtension {
   def readConfig[A: Decoder](plugin: Plugin): Either[io.circe.Error, A] =
     readDataFile[A](configFileName)(plugin)
 
-  def writeConfig[A: Encoder](a: A)(plugin: Plugin): Try[Unit] = {
+  def writeConfig[A: Encoder](a: A)(plugin: Plugin): Try[Unit] =
+    writeDataFile(configFileName)(a)(plugin)
+
+  def writeDataFile[A: Encoder](fileName: String)(a: A)(plugin: Plugin): Try[Unit] = {
     val node = Encoder[A].apply(a)
     Try(
-      getConfigFile(plugin)
+      new File(plugin.getDataFolder, fileName)
         .writeText[SyncIO](printer.print(node))
         .unsafeRunSync()
     )
@@ -78,6 +84,9 @@ object PluginExtension {
         fileName: String
     ): Either[io.circe.Error, A]
     def readConfig[A: Decoder]: Either[io.circe.Error, A]
+    def writeDataFile[A: Encoder](
+        fileName: String
+    )(a: A): Try[Unit]
     def writeConfig[A: Encoder](a: A): Try[Unit]
     def writeDefaultConfig[A: Encoder](a: A): Try[Unit]
   }

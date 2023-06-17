@@ -19,7 +19,7 @@ lazy val core = (project in file("core"))
       "io.circe" %% "circe-generic",
       "io.circe" %% "circe-parser",
       "io.circe" %% "circe-yaml"
-    ).map(_ % circeVersion),
+    ).map(_ % circeVersion % Provided),
     publishM2Configuration := publishM2Configuration.value.withOverwrite(true),
     publishLocalConfiguration := publishLocalConfiguration.value.withOverwrite(
       true
@@ -39,7 +39,12 @@ lazy val bukkit = (project in file("bukkit"))
     libraryDependencies ++= Seq(
       "org.spigotmc" % "spigot" % "1.17.1-R0.1-SNAPSHOT" % Provided,
       "org.typelevel" %% "cats-core" % "2.7.0"
-    ),
+    ) ++ Seq(
+      "io.circe" %% "circe-core",
+      "io.circe" %% "circe-generic",
+      "io.circe" %% "circe-parser",
+      "io.circe" %% "circe-yaml"
+    ).map(_ % circeVersion % Provided),
     publishM2Configuration := publishM2Configuration.value.withOverwrite(true),
     publishLocalConfiguration := publishLocalConfiguration.value.withOverwrite(
       true

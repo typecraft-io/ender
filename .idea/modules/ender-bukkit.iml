@@ -26,12 +26,12 @@
     <orderEntry type="module" module-name="ender-core" exported="" />
     <orderEntry type="library" name="sbt: co.fs2:fs2-core_2.13:3.2.4:jar" level="project" />
     <orderEntry type="library" name="sbt: com.chuusai:shapeless_2.13:2.3.7:jar" level="project" />
-    <orderEntry type="library" name="sbt: io.circe:circe-core_2.13:0.14.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: io.circe:circe-generic_2.13:0.14.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: io.circe:circe-jawn_2.13:0.14.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: io.circe:circe-numbers_2.13:0.14.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: io.circe:circe-parser_2.13:0.14.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: io.circe:circe-yaml_2.13:0.14.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: io.circe:circe-core_2.13:0.14.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: io.circe:circe-generic_2.13:0.14.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: io.circe:circe-jawn_2.13:0.14.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: io.circe:circe-numbers_2.13:0.14.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: io.circe:circe-parser_2.13:0.14.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: io.circe:circe-yaml_2.13:0.14.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-collection-compat_2.13:2.6.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.13.8:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-reflect:2.13.8:jar" level="project" />
@@ -46,8 +46,8 @@
     <orderEntry type="library" name="sbt: org.typelevel:cats-effect_2.13:3.3.4:jar" level="project" />
     <orderEntry type="library" name="sbt: org.typelevel:cats-free_2.13:2.7.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.typelevel:cats-kernel_2.13:2.7.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.typelevel:jawn-parser_2.13:1.1.2:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.typelevel:jawn-parser_2.13:1.1.2:jar" level="project" />
     <orderEntry type="library" name="sbt: org.typelevel:simulacrum-scalafix-annotations_2.13:0.5.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.yaml:snakeyaml:1.28:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="sbt: org.yaml:snakeyaml:1.28:jar" level="project" />
   </component>
 </module>
