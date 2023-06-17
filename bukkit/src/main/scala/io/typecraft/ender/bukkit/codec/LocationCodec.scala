@@ -21,9 +21,9 @@ object LocationCodec {
     val x = pieces.lift(0).flatMap(_.toDoubleOption).getOrElse(0.0)
     val y = pieces.lift(1).flatMap(_.toDoubleOption).getOrElse(0.0)
     val z = pieces.lift(2).flatMap(_.toDoubleOption).getOrElse(0.0)
-    val world = pieces.lift(4).getOrElse("")
-    val pitch = pieces.lift(5).flatMap(_.toFloatOption).getOrElse(0f)
-    val yaw = pieces.lift(6).flatMap(_.toFloatOption).getOrElse(0f)
+    val world = pieces.lift(3).getOrElse("")
+    val pitch = pieces.lift(4).flatMap(_.toFloatOption).getOrElse(0f)
+    val yaw = pieces.lift(5).flatMap(_.toFloatOption).getOrElse(0f)
     new Location(
       if (world.nonEmpty) Bukkit.getWorld(world) else null,
       x, y, z,
